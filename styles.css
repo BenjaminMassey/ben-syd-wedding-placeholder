@@ -3,56 +3,60 @@ body {
     padding: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #3c393a; /* Charcoal background */
+    background-image: url("images/background.png");
+    background-repeat: repeat;
     font-family: "Cormorant Garamond", serif;
-    position: relative;
     overflow: hidden;
 }
 
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, transparent 20%, #3c393a 20%, #1c1b1c 40%, transparent 40%, transparent),
-                radial-gradient(circle, transparent 20%, #3c393a 20%, #1c1b1c 40%, transparent 40%, transparent) 50px 50px;
-    background-size: 10px 10px;
-    opacity: 0.4;
-    pointer-events: none;
-}
-
-.container {
+.text-container {
     text-align: center;
     color: white;
     position: relative;
     z-index: 1;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: min(5vh, 5vw);
+    text-wrap: nowrap;
 }
 
-p {
-    font-size: 1.2rem;
+h2 {
+    font-size: min(2.5vh, 2.5vw);
 }
 
-.pedal {
+.top-left {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 5px solid #7a4040;
-    transform: rotate(45deg);
+    top: 0px;
+    left: 0px;
+    width: max(25vw, 25vh);
 }
-.stem {
+
+.bottom-right {
     position: absolute;
-    width: 5px;
-    height: 30px;
-    background-color: #7a4040;
+    bottom: 0px;
+    right: 0px;
+    width: max(25vw, 25vh);
+}
+
+.lakeside-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.lakeside-icon {
+    width: 1.5vw;
+    min-width: 20px;
+    max-width: 150px;
+    padding-left: 2%;
+    padding-right: 2%;
 }
